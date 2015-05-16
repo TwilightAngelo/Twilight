@@ -16,7 +16,6 @@
 				{
 					$auth = new Application();
 					$auth->authorization();
-					$auth->check();
 				}
 				echo "sfsf";
 			?>
