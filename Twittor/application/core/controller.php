@@ -4,7 +4,7 @@
 		public $model;
 		public $view;
 
-		function __construst()
+		function __construct()
 		{
 			$this->view = new View();
 		}
