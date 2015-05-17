@@ -1,5 +1,5 @@
 <?php
-	class Controller_Authorization extends Controller
+	class Controller_authorization extends Controller
 	{
 
 		protected $serverName = "TWILIGHT\SQLEXPRESS";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-class Controller_Login extends Controller
+class Controller_login extends Controller
 {
 	public function __construct()
 	{

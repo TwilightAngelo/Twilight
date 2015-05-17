@@ -10,12 +10,25 @@
 
 			if (!empty($routes[1]))
 			{
+				$routes[1] = strtolower($routes[1]);
 				$controller_name = $routes[1];
 			}
 
 			if (!empty($routes[2]))
 			{
 				$action_name = $routes[2];
+			}
+
+			$sttmp = strpos($controller_name, 'page');
+			var_dump($sttmp);
+
+			$str = substr($routes[1], 0, 4);
+			var_dump($str);
+
+			if ($str === 'page')
+			{
+				$controller_name = 'page';
+				$action_param = str_replace('page', '', $routes[1]);
 			}
 
 			$model_name = 'Model_' . $controller_name;
@@ -46,7 +59,7 @@
 
 			if (method_exists($controller, $action))
 			{
-				$controller->$action();
+				$controller->$action($action_param);
 			}
 			else
 			{
@@ -54,7 +67,7 @@
 			}
 		}
 
-		function ErrorPage404()
+		static function ErrorPage404()
 		{
 			$host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 			header('HTTP/1.1 404 Not Found');

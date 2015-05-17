@@ -1,6 +1,6 @@
 <?php
 
-	class Model_Main extends Model
+	class Model_HomePage extends Model
 	{
 
 		protected $serverName = "TWILIGHT\SQLEXPRESS";
@@ -16,6 +16,19 @@
 			$post = $posts->fetch(PDO::FETCH_LAZY);
 
 			return array('user_data' => $user, 'post_data' => $post);
+		}
+
+		public function insert_data($data)
+		{
+			$p_repository = new PostRepository($this->serverName, $this->databaseName);
+			$p_repository->save($data);
+		}
+
+		public function update_data($data)
+		{
+			$u_repository = new UserRepository($this->serverName, $this->databaseName);
+			//$u_repository->update_info($entity);
+			//дописать!!!!!!!!!1111111один
 		}
 	}
 ?>

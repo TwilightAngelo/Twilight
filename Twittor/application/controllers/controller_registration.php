@@ -1,5 +1,5 @@
 <?php
-	class Controller_Registration extends Controller
+	class Controller_registration extends Controller
 	{
 		function action_index()
 		{
