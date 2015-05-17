@@ -30,9 +30,8 @@
 			$rows = $this->select($arr);
 			return $rows;
 		}
-		public function getByOwner($user)
+		public function getByOwner($id)
 		{	
-			$id = $user->getID();
 			$arr = array('owner' => $id);
 			$rows = $this->select($arr);
 			return $rows;

@@ -1,6 +1,9 @@
 
 <?php
-	require_once ('Database.php');
+	require_once ('C:\Users\Twilight_Angelo\Documents\GitHub\Twilight\Twittor\application\models\Repository\Repository.php');
+	require_once ('C:\Users\Twilight_Angelo\Documents\GitHub\Twilight\Twittor\application\models\Repository\PostRepository.php');
+	require_once ('C:\Users\Twilight_Angelo\Documents\GitHub\Twilight\Twittor\application\models\Repository\UserRepository.php');
+	
 	class Application
 	{
 		protected $connection;
@@ -71,7 +74,6 @@
 	
 			}
 		}
-	
 	
 		public function check()
 		{

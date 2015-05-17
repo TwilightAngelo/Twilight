@@ -7,14 +7,22 @@
 		private $firstName;
 		private $lastName;
 		private $email;
+
 		public function toArray()
 		{
 			return (array('login' => $this->login, 'password' => $this->password, 'email' => $this->email ));
 		}
+
 		public function getID()
 		{
 			return $this->id;
 		}
+
+		public function getLogin()
+		{
+			return $this->login;
+		}
+			
 		public function __construct($array)
 		{
 			$this->id = $array['id'];
